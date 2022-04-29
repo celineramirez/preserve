@@ -1,0 +1,32 @@
+{% extends "habitat/base.html" %}
+
+{% block content %}
+{% load static %}
+<div class="col">
+    <img class="img-fluid w-100" src="{% static 'Pano.png' %}" alt="">
+</div>
+
+<div class="container-sm">
+    <div class="row">
+        <div class="col">
+            <figure class="text-center pt-4">
+                <h1><strong>{{ habitat.name }}</strong></h1>
+            </figure>
+            <h3>KEY CHARACTERISTICS</h3>
+            <p> {{ habitat.description }}</p>
+            <h3>RANGE</h3>
+            <div class="text-center pb-3">
+                <img class='img-fluid w-100 border border-dark border-3' src="{% static 'range.png' %}" alt="">
+            </div>
+            <h3>HISTORY</h3>
+            <p> {{ habitat.history }}</p>
+            <h3>THREATS</h3>
+            <p> {{ habitat.threats }}</p>
+            <h3>INVASIVE SPECIES</h3>
+            <p> {{ habitat.invasive_species }}</p>
+            <h3>CONSERVATION STRATEGIES</h3>
+            <p> {{ habitat.conservation_strategies }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
